@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatWithEarth AI</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="logo">WhatWithEarth AI</header>
+
+  <main class="main">
+    <section class="card">
+      <label for="scenario">Опиши сценарий</label>
+      <textarea id="scenario" placeholder="Например: Перевести всю Европу на возобновляемую энергию к 2050 году..."></textarea>
+
+      <div class="time-row">
+        <label for="years">Горизонт</label>
+        <input id="years" type="range" min="10" max="200" step="10" value="50" />
+        <div id="years-val" class="years-val">50 лет</div>
+      </div>
+
+      <button id="run">Запустить симуляцию</button>
+
+      <div class="result" id="result">Результаты появятся здесь.</div>
+    </section>
+
+    <section class="earth-container">
+      <img id="earthImage" src="images/earth-map.png" alt="Карта Земли" class="earth-base">
+      <img id="continentImage" class="continent-image" alt="Континент">
+      <div id="continentLabel" class="continent-label"></div>
+    </section>
+  </main>
+
+  <footer>© WhatWithEarth AI</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
